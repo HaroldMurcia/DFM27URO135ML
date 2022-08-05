@@ -26,7 +26,7 @@ Este repositorio consiste en el intento de desarrollo de un paquete de Ros que p
 
 [TIS Camera-0.14.0](https://github.com/TheImagingSource/tiscamera/releases):
 
-La descarga la versión 0.14.0 de tiscamera del siguiente [link](https://github.com/TheImagingSource/tiscamera/releases) y luego realice los siguientes pasos: 
+La descarga el archivo "source code (zip)" de la versión 0.14.0 de tiscamera del siguiente [link](https://github.com/TheImagingSource/tiscamera/releases) y luego realice los siguientes pasos: 
 
 ```console
 $ cd tiscamera-v-tiscamera-0.14.0
