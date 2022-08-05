@@ -24,11 +24,12 @@ Este repositorio consiste en el intento de desarrollo de un paquete de Ros que p
 
 ## 2. Instalación
 
-[TIS Camera](https://www.theimagingsource.com/documentation/tiscamera/tutorial.html):
+[TIS Camera-0.14.0](https://github.com/TheImagingSource/tiscamera/releases):
+
+La descarga la versión 0.14.0 de tiscamera del siguiente [link](https://github.com/TheImagingSource/tiscamera/releases) y luego realice los siguientes pasos: 
 
 ```console
-$ git clone https://github.com/TheImagingSource/tiscamera.git
-$ cd tiscamera
+$ cd tiscamera-v-tiscamera-0.14.0
 $ ./scripts/dependency-manager install
 $ mkdir build
 $ cd build
