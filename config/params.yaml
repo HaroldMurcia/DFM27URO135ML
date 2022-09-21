@@ -39,10 +39,10 @@ dfm27uro135ml:
 
   formats:
     name: "video/x-raw"
-    format: "GRAY8"
-    width: 1280
-    height: 960
-    fps: 30
+    format: "RGB"
+    width: 640
+    height: 480
+    fps: 10
 
   rosEncodingType:
     grbg: "8UC3"
@@ -54,3 +54,14 @@ dfm27uro135ml:
     ARGB: "8UC4"
     BGRA: "bgra8"
     ABGR: "8UC4"
+
+  rosNumChannels:
+    grbg: 3
+    GRAY8: 1
+    GRAY16_LE: 1
+    RGB: 3
+    BGR: 3
+    RGBA: 4
+    ARGB: 4
+    BGRA: 4
+    ABGR: 4

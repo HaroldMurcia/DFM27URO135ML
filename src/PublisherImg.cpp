@@ -161,7 +161,7 @@ static GstFlowReturn publish_img(GstElement *appsink, MonoDFM *mono_DFM)
     img.width = mono_DFM->param_server.width;
     img.encoding = mono_DFM->param_server.ros_encoding_type;
     img.data.assign(info.data, info.data + info.size);
-    img.step = mono_DFM->param_server.width;
+    img.step = (mono_DFM->param_server.width) * (mono_DFM->param_server.ros_num_channels);
     img.header.stamp = ros::Time::now();
     mono_DFM->pub_img_cam.publish(img);
     gst_buffer_unmap(buffer, &info);

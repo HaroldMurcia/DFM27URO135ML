@@ -28,12 +28,14 @@ public:
     string pwd_base_formats = "/dfm27uro135ml/formats/";
     string pwd_base_properties = "/dfm27uro135ml/properties/";
     string pwd_base_ros_encoding_type = "/dfm27uro135ml/rosEncodingType/";
+    string pwd_base_ros_num_channels = "/dfm27uro135ml/rosNumChannels/";
 
     string serial_cam;
 
     string ros_encoding_type;
     int32_t width;
     int32_t height;
+    int ros_num_channels;
 
     ParamServer()
     {
@@ -66,6 +68,12 @@ public:
         pwd_ros_encoding_type.append(format);
 
         nh.param<std::string>(pwd_ros_encoding_type, ros_encoding_type, "mono8");
+
+        string pwd_ros_num_channels;
+        pwd_ros_num_channels.append(pwd_base_ros_num_channels);
+        pwd_ros_num_channels.append(format);
+
+        nh.param<int>(pwd_ros_num_channels, ros_num_channels, 3);
     }
 
     void set_property(GstElement *cam, const char *name_ros, const char *name, const char *type)
