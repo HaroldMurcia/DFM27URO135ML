@@ -39,9 +39,9 @@ dfm27uro135ml:
 
   formats:
     name: "video/x-raw"
-    format: "RGB"
-    width: 640
-    height: 480
+    format: "BGR"
+    width: 1024
+    height: 768
     fps: 10
 
   rosEncodingType:
