@@ -26,7 +26,7 @@ Este repositorio consiste en el intento de desarrollo de un paquete de Ros que p
 
 [TIS Camera-0.14.0](https://github.com/TheImagingSource/tiscamera/releases):
 
-Descargue el archivo "source code (zip)" de la versión 0.14.0 de tiscamera del siguiente [link](https://github.com/TheImagingSource/tiscamera/releases) y luego realice los siguientes pasos: 
+Descargue el archivo "source code (zip)" de la versión 0.14.0 de tiscamera del siguiente [link](https://github.com/TheImagingSource/tiscamera/releases) y luego realice los siguientes pasos:
 
 ```console
 $ cd tiscamera-v-tiscamera-0.14.0
@@ -57,38 +57,49 @@ Para realizar cambios en las propiedades o en el formato de las cámaras, modifi
   ```console
   dfm27uro135ml:
     serial:
-      cam: "26810384"
+      cam: "13910330"
 
     properties:
-      Brightness: 16
-      Exposure Time (us): 33333
       GPIn: 0
       GPOut: 0
+      OffsetAutoCenter: true
+      OffsetX: 0
+      OffsetY: 0
+      OverrideScanningMode: 0
+      StrobeEnable: false
+      StrobeExposure: false
+      StrobePolarity: false
+      TriggerDelayUs: 0
+      TriggerGlobalResetRelease: false
+      TriggerMode: false
+      cameraWhitebalance: false
+      whitebalanceAuto: true
+      whitebalanceBlue: 64
+      whitebalanceGreen: 64
+      whitebalanceModuleEnabled: true
+      whitebalanceRed: 64
+      Brightness: 16
+      BrightnessReference: 60
+      ExposureTimeUs: 33300
+      ExposureAuto: true
+      ExposureMin: 100
+      ExposureMax: 33300
       Gain: 48
-      Gain (dB/100): 0
-      Offset Auto Center: true
-      Offset X: 0
-      Offset Y: 0
-      Override Scanning Mode: 0
-      Strobe Enable: false
-      Strobe Exposure: false
-      Strobe Polarity: false
-      Trigger Delay (us): 0
-      Trigger Global Reset Release: false
-      Trigger Mode: false
-      camera-whitebalance: false
-      whitebalance-auto: true
-      whitebalance-blue: 64
-      whitebalance-green: 64
-      whitebalance-module-enabled: true
-      whitebalance-red: 64
+      GainDB100: 0
+      GainAuto: false
+      GainMin: 48.0
+      GainMax: 2047.0
+      ExposureROILeft: 0
+      ExposureROIWidth: 1280
+      ExposureROITop: 0
+      ExposureROIHeight: 960
 
     formats:
       name: "video/x-raw"
-      format: "RGB"
-      width: 1280
-      height: 960
-      fps: 40
+      format: "BGR"
+      width: 1024
+      height: 768
+      fps: 10
   ```
 
   Con base en la informacion suministrada por los siguientes comandos :
