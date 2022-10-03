@@ -120,9 +120,10 @@ int main(int argc, char *argv[])
 
     ROS_INFO_STREAM("\033[1;32m-> LiveStreamCam.\033[0m");
     ROS_INFO_STREAM("Press Ctrl-C to stop the stream.");
-    while (ros::ok())
-    {
-    };
+    // while (ros::ok())
+    // {
+    // };
+    getchar();
 
     gst_element_set_state(pipeline, GST_STATE_NULL);
 

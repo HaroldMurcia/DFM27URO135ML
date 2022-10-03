@@ -1,6 +1,6 @@
 dfm27uro135ml:
   serial:
-    cam: "13910330"
+    cam: "26810384"
 
   properties:
     GPIn: 0
@@ -22,16 +22,16 @@ dfm27uro135ml:
     whitebalanceModuleEnabled: true
     whitebalanceRed: 64
     Brightness: 16
-    BrightnessReference: 60
-    ExposureTimeUs: 33300
+    BrightnessReference: 128
+    ExposureTimeUs: 12000
     ExposureAuto: true
     ExposureMin: 100
-    ExposureMax: 33300
+    ExposureMax: 12000
     Gain: 48
     GainDB100: 0
-    GainAuto: false
+    GainAuto: true
     GainMin: 48.0
-    GainMax: 2047.0
+    GainMax: 100.0
     ExposureROILeft: 0
     ExposureROIWidth: 1280
     ExposureROITop: 0
@@ -40,8 +40,8 @@ dfm27uro135ml:
   formats:
     name: "video/x-raw"
     format: "BGR"
-    width: 1024
-    height: 768
+    width: 1280
+    height: 960
     fps: 10
 
   rosEncodingType:

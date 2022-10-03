@@ -5,7 +5,6 @@ class MonoDFM
 public:
     ParamServer param_server;
 
-    ros::NodeHandle nh;
     ros::Publisher pub_img_cam;
 
     GstElement *pipeline;
@@ -18,14 +17,10 @@ public:
         string pip_des;
         pip_des.append("tcambin name=camera serial=");
         pip_des.append(this->param_server.serial_cam);
-
-        string pip_des_c;
-        pip_des_c.append(" use-dutils=true ");
-        pip_des_c.append("! capsfilter name=filter ");
-        pip_des_c.append("! queue max-size-buffers=2 leaky=downstream ");
-        pip_des_c.append("! appsink name=sink");
-
-        pip_des.append(pip_des_c);
+        pip_des.append(" use-dutils=true ");
+        pip_des.append("! capsfilter name=filter ");
+        pip_des.append("! queue max-size-buffers=2 leaky=downstream ");
+        pip_des.append("! appsink name=sink");
 
         const char *pipeline_description = pip_des.c_str();
 
@@ -59,7 +54,8 @@ public:
 
     void setting_publisher()
     {
-        this->pub_img_cam = this->nh.advertise<sensor_msgs::Image>(
+        ros::NodeHandle nh;
+        this->pub_img_cam = nh.advertise<sensor_msgs::Image>(
             "dfm27uro135ml/cam/image_raw", 1);
     }
 
@@ -109,7 +105,6 @@ public:
     void setting_capsfilter()
     {
         this->param_server.set_format(this->capsfilter);
-
         gst_object_unref(this->capsfilter);
     }
 
@@ -197,10 +192,10 @@ int main(int argc, char *argv[])
 
     ROS_INFO_STREAM("\033[1;32m-> PublisherImg.\033[0m");
     ROS_INFO_STREAM("Press Ctrl-C to stop.");
-
-    while (ros::ok())
-    {
-    }
+    // while (ros::ok())
+    // {
+    // }
+    getchar();
 
     gst_element_set_state(mono_DFM.pipeline, GST_STATE_NULL);
 
