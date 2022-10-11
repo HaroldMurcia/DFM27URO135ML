@@ -22,16 +22,16 @@ dfm27uro135ml:
     whitebalanceModuleEnabled: true
     whitebalanceRed: 64
     Brightness: 16
-    BrightnessReference: 128
-    ExposureTimeUs: 12000
+    BrightnessReference: 100
+    ExposureTimeUs: 8000
     ExposureAuto: true
     ExposureMin: 100
-    ExposureMax: 12000
+    ExposureMax: 8000
     Gain: 48
     GainDB100: 0
     GainAuto: true
     GainMin: 48.0
-    GainMax: 100.0
+    GainMax: 80.0
     ExposureROILeft: 0
     ExposureROIWidth: 1280
     ExposureROITop: 0
